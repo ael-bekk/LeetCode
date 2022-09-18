@@ -3,11 +3,8 @@
  */
 int* runningSum(int* nums, int s, int* rs)
 {
-    long long sum = 0;
-
-    for (int i = 0; i < s; i++)
-        sum += nums[i],
-        nums[i] = sum;
+    for (int i = 1; i < s; i++)
+        nums[i] += nums[i - 1];
     *rs = s;
     return (nums);
 }
