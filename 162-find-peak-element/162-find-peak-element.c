@@ -1,5 +1,4 @@
 
-
 int findPeakElement(int* nums, int numsSize)
 {
     int l = 0, r = numsSize - 1, mid;
