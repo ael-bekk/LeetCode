@@ -4,7 +4,7 @@ int calcul_len(int n)
     int i = 0;
 
     while (n)
-        i++, n /= 2;
+        i++, n >>= 1;
     return (i);
 }
 
