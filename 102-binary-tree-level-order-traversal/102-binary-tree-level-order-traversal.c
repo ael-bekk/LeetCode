@@ -13,7 +13,6 @@
  * The sizes of the arrays are returned as *returnColumnSizes array.
  * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
  */
-
 void fill(struct TreeNode* root, int*** arr, int s, int *rs, int** c)
 {
     if (root)
