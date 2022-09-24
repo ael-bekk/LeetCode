@@ -6,7 +6,6 @@
  * };
  */
 
-
 struct ListNode *detectCycle(struct ListNode *head)
 {
     struct ListNode *q, *p = head;
