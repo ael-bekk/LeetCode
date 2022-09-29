@@ -5,10 +5,10 @@ public:
         int size = arr.size();
         int l = 0, r = size - 1;
         vector<int> res;
-        vector<int> ar;
-        
+        int ar[10000];
+
         for (int i = 0; i < size; i++)
-            ar.push_back(abs(arr[i] - target)),cout << ar[i] << " ";
+            ar[i] = abs(arr[i] - target);
 
         while (l < r && r - l > close - 1)
             if (ar[l] <= ar[r])
