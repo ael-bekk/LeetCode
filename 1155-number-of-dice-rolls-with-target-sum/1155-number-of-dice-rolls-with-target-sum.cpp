@@ -1,7 +1,7 @@
 class Solution {
 public:
     int arr[31][1001];
-    
+    int mod = 1000000007;
     int Rolls(int n, int k, int target)
     {
         long long sum = 0;
@@ -13,7 +13,10 @@ public:
         if (arr[n][target] != -1)
             return (arr[n][target]);
         for (int i = 1; i <= k; i++)
-            sum = (sum + Rolls(n - 1, k, target - i)) % 1000000007;
+        {
+            int s = Rolls(n - 1, k, target - i);
+            sum = (sum + s) % mod;
+        }
         arr[n][target] = sum;
         return (sum);
     }
