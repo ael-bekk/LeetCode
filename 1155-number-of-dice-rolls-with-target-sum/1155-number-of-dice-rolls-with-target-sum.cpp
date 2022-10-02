@@ -13,10 +13,7 @@ public:
         if (arr[n][target] != -1)
             return (arr[n][target]);
         for (int i = 1; i <= k; i++)
-        {
-            int s = Rolls(n - 1, k, target - i);
-            sum = (sum + s) % 1000000007;
-        }
+            sum = (sum + Rolls(n - 1, k, target - i)) % 1000000007;
         arr[n][target] = sum;
         return (sum);
     }
