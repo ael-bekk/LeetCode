@@ -8,8 +8,8 @@ public:
         {
             int prv = (i - 1) * (tmp == -1) + tmp * (tmp != -1);
             if (colors[i] == colors[prv])
-                time += min(neededTime[i], neededTime[prv]),
-                tmp = (neededTime[i] > neededTime[prv]) ? i : prv;
+                tmp = (neededTime[i] > neededTime[prv]) ? i : prv,
+                time += neededTime[i] + neededTime[prv] - neededTime[tmp];
             else
                 tmp = -1;
         }       
