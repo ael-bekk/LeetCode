@@ -15,10 +15,13 @@ public:
     {
         if (!root)
             return ;
-        Smallest(root->left, k, res);
-        if (!--k)
-            res = root->val;
-        Smallest(root->right, k, res);
+        if (!res)
+        {
+            Smallest(root->left, k, res);
+            if (!--k)
+                res = root->val;
+            Smallest(root->right, k, res);
+        }
     }
     
     int kthSmallest(TreeNode* root, int k)
