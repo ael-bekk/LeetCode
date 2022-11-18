@@ -17,14 +17,8 @@ public:
                     break;
             }
         while (!q.empty())
-        {
-            // vector<int> v;
-            
-            // v.push_back(q.top().second.first);
-            // v.push_back(q.top().second.second);
-            _vec.push_back({q.top().second.first, q.top().second.second});
+            _vec.push_back({q.top().second.first, q.top().second.second}),
             q.pop();
-        }
         return (_vec);
     }
 };
