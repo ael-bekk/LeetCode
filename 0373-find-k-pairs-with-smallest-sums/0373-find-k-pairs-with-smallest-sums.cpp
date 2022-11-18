@@ -6,7 +6,6 @@ public:
         priority_queue <pair <int, pair<int, int>>> q;
 
         for (auto x : nums1)
-        {
             for (auto y : nums2)
             {
                 if (k-- > 0)
@@ -17,7 +16,6 @@ public:
                 else
                     break;
             }
-        }
         while (!q.empty())
         {
             vector<int> v;
