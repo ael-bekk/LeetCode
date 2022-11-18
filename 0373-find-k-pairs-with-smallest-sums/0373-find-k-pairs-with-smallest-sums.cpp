@@ -15,8 +15,6 @@ public:
                     else if (q.top().first > x + y)
                         q.pop(),
                         q.push({x + y, {x, y}});
-                    else
-                        break;
         while (!q.empty())
             _vec.push_back({q.top().second.first, q.top().second.second}),
             q.pop();
