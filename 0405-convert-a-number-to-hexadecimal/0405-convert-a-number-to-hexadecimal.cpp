@@ -2,7 +2,7 @@ class Solution {
 public:
     string toHex(int n) {
         string res;
-        char base[] = "0123456789abcdef";
+        string base = "0123456789abcdef";
         unsigned int num = n;
         do
         {
