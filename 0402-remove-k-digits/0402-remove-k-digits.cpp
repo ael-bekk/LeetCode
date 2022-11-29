@@ -10,11 +10,9 @@ public:
                 k--;
             s += nums[i];
         }
-        while (k--)
-            s.pop_back();
-        s = (s == "") ? "0" : s;
-        while (st + 1 < s.length() && s[st] == '0')
-            st++;
+        while (k--) s.pop_back();
+        if (s == "") s = "0";
+        while (st + 1 < s.length() && s[st] == '0') st++;
         return (s.substr(st));
     }
 };
