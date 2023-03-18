@@ -3,12 +3,8 @@ public:
     vector<int> sortArray(vector<int>& nums) {
         if (nums.size() == 1)
             return (nums);
-        vector<int> a, b;
-        for (int i = 0; i < nums.size(); i++)
-            if (i < nums.size() / 2)
-                a.push_back(nums[i]);
-            else
-                b.push_back(nums[i]);
+        vector<int> a(nums.begin(), nums.begin() + nums.size()/2);
+        vector<int> b(nums.begin() + nums.size()/2, nums.end());
         sortArray(a);
         sortArray(b);
         for (int i = 0, j = 0; i < a.size() || j < b.size();) {
