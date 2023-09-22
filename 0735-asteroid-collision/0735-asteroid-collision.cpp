@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> asteroidCollision(vector<int>& asteroids) {
         int leftAsteroid = asteroids.size();
-        unordered_map<int, bool> collid;
+        map<int, bool> collid;
         stack<int> stack;
         vector<int> res;
         int indx;
